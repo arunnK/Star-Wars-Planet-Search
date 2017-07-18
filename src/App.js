@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Request from 'superagent';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 
@@ -7,11 +6,6 @@ import loginPage from './loginPage';
 import searchPage from './searchPage';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.isLoggedIn = sessionStorage.getItem("LoggedIn");
-  }
-
   render() {
     return (
       <div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
 import './loginPage.css';
 import Request from 'superagent';
-import searchPage from './searchPage';
 
 class loginPage extends Component {
 
@@ -22,7 +21,7 @@ class loginPage extends Component {
   }
 
   handlePasswordChange(event){
-    this.setState({pass: event.target.value})
+    this.setState({pass: event.target.value});
   }
 
   handleUsernameChange(event) {

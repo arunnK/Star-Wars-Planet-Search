@@ -1,3 +1,17 @@
 .sample{
     color: white;
 }
+
+.searchBox{
+    margin-left: 35%;
+    margin-top: 10%;
+    width: 30%;
+}
+
+.results{
+    margin-left: 23%;
+    margin-top: 2%;
+    width: 50%;
+    text-align: center;
+    list-style: none;
+}
