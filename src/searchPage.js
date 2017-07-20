@@ -30,13 +30,19 @@ class searchPage extends Component {
   render() {
     this.planetSearch();
     const isAlreadyAuthenticated = this.isAuthenticated();
-    let planets = _.map(this.state.planets, (planet) => {
-      return <li>{planet.name}</li>;
+    let planets = _.map(this.state.planets, (planet) => { 
+      let population = Math.log(planet.population);
+      if(planet.population === 'unknown'){
+        population = 15; 
+      }
+      return <div id="searchResult" style={{height:(population*3)}}><li>{planet.name} ({planet.population})</li></div>;
     });
+
     return (
-      <div>
+      <div className="searchComponent">
         {!isAlreadyAuthenticated ? <Redirect to={{pathname: '/'}}/> : (
-        <div className="sample">
+        <div>
+          <h3 className="header">Star Wars Planet Search</h3>
           <input className="searchBox" type="text" onChange={this.planetSearch} placeholder="Start typing to search a planet..." name="searchbox" required/>
           <ul className="results">{planets}</ul>
         </div>
