@@ -6,6 +6,20 @@
   margin-top: 10%;
 }
 
+.logout{
+    border: 2.5px solid #f2f2f2;
+    margin-left: 3%;
+    padding: 0.5%;
+    width: 5%;
+    margin-top: 1%;
+}
+
+.logoutText{
+    color: #f2f2f2;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 .searchBox{
     margin-left: 35%;
     text-align: center;

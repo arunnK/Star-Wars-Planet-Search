@@ -46,10 +46,11 @@ class loginPage extends Component {
           name: response.body.results[0].name,
           year: response.body.results[0].birth_year
         });
-        var userName = this.state.name;
-        var year = this.state.year;
+        let userName = this.state.name;
+        let year = this.state.year;
         if(uName === userName && passwd === year){  
           sessionStorage.setItem("LoggedIn",true);
+          sessionStorage.setItem("UserName",userName);
           this.setState();
         }
         else{

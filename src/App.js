@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import loginPage from './loginPage';
 import searchPage from './searchPage';
+import Logout from './Logout';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={loginPage} />
               <Route path='/search' component={searchPage}/>
+              <Route path="/logout" component={Logout} />
             </Switch>
           </div>
         </BrowserRouter>
